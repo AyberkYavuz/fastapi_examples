@@ -43,3 +43,13 @@ async makes your tasks running at the same time by calling the function that inc
 (long running operations like db select, network operations, etc).
 
 By using await you can send your response after all tasks are finished
+
+### async_example.py
+
+Just have a look at [async_example.py](https://github.com/AyberkYavuz/fastapi_examples/blob/main/async_example.py)
+
+Read the docstrings of the functions.
+
+```bash
+uvicorn async_example:app --reload
+```
