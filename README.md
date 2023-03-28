@@ -69,7 +69,13 @@ When you make a POST request to this endpoint with a valid JSON object, FastAPI 
 body and validate it against the Item model. 
 If the JSON object is valid, FastAPI will pass an instance of the Item model to the create_item function.
 
-Here's an example of a valid JSON object that you could use to test this endpoint:
+to run it, use this command in your terminal
+
+```bash
+uvicorn extracting_parameter_values:app --reload
+```
+
+Here's an example of a valid JSON object that you could use to test **/items/** endpoint:
 
 ```json
 {
@@ -79,9 +85,29 @@ Here's an example of a valid JSON object that you could use to test this endpoin
 }
 ```
 
+### fastapi_ml_server.py
+
+Just have a look at [fastapi_ml_server.py](https://github.com/AyberkYavuz/fastapi_examples/blob/main/fastapi_ml_server.py)
+
+This file is the heart of ml engineering.
+
+Please read the docstrings of the methods.
+
+the post method makes the server handle the concurrent requests!
 
 to run it, use this command in your terminal
 
 ```bash
-uvicorn extracting_parameter_values:app --reload
+uvicorn fastapi_ml_server:app --reload 
+```
+
+Here's an example of a valid JSON object that you could use to test **/predict_class** endpoint:
+
+```json
+{
+  "sepal_length": 5.1, 
+  "sepal_width": 3.5, 
+  "petal_length": 1.4, 
+  "petal_width": 0.2
+}
 ```
