@@ -32,3 +32,14 @@ uvicorn custom_router:app --reload
 ```
 
 After that use postman to create requests and get responses from get and post methods of the class.
+
+### async/await
+
+async/await is a powerful feature in Python that allows you to write asynchronous code that can run concurrently. 
+FastAPI is built on top of Starlette, which itself is built on top of the ASGI specification. 
+This makes it very easy to write asynchronous code in FastAPI.
+
+async makes your tasks running at the same time by calling the function that includes the logic 
+(long running operations like db select, network operations, etc).
+
+By using await you can send your response after all tasks are finished
