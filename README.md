@@ -18,3 +18,15 @@ to run it, use this command in your terminal
 ```bash
 uvicorn main:app --reload
 ```
+
+### custom_router.py
+
+You can write a custom router to route urls to class methods.
+
+to run it, use this command in your terminal
+
+```bash
+uvicorn custom_router:app --reload
+```
+
+After that use postman to create requests and get responses from get and post methods of the class.
