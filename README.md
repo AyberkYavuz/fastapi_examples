@@ -50,6 +50,10 @@ Just have a look at [async_example.py](https://github.com/AyberkYavuz/fastapi_ex
 
 Read the docstrings of the functions.
 
+to run it, use this command in your terminal
+
 ```bash
 uvicorn async_example:app --reload
 ```
+
+After that trigger **/data** url
