@@ -57,3 +57,31 @@ uvicorn async_example:app --reload
 ```
 
 After that trigger **/data** url
+
+### extracting_parameter_values.py
+
+Just have a look at [extracting_parameter_values.py](https://github.com/AyberkYavuz/fastapi_examples/blob/main/extracting_parameter_values.py)
+
+In this example, we define a POST endpoint that accepts a request body with a JSON object containing an Item model. 
+The Item model is defined using Pydantic's BaseModel, which allows us to define the expected structure of the JSON object.
+
+When you make a POST request to this endpoint with a valid JSON object, FastAPI will automatically parse the request 
+body and validate it against the Item model. 
+If the JSON object is valid, FastAPI will pass an instance of the Item model to the create_item function.
+
+Here's an example of a valid JSON object that you could use to test this endpoint:
+
+```json
+{
+    "name": "Foo",
+    "price": 50.2,
+    "is_offer": true
+}
+```
+
+
+to run it, use this command in your terminal
+
+```bash
+uvicorn extracting_parameter_values:app --reload
+```
