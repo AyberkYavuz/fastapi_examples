@@ -56,16 +56,17 @@ class MyRouter(APIRouter):
         features_dataframe = pd.DataFrame(features_values, columns=feature_names)
         return features_dataframe
 
-    async def __get_prediction(self, features_dataframe: pd.DataFrame):
+    async def __get_prediction_concurrent(self, flower: Flower):
         """
         Generates a prediction for the given flower attributes.
 
         Args:
-            features_dataframe (pandas.DataFrame): A pandas DataFrame object containing the input flower attributes.
+            flower (Flower): A Pydantic model representing the flower attributes.
 
         Returns:
             prediction (str): A string representing the predicted flower class.
         """
+        features_dataframe = await self.__get_features_dataframe(flower)
         prediction = production_machine_learning_model.predict(features_dataframe)[0]
         prediction = iris_target_label_encoder.inverse_transform([int(prediction)])[0]
         return prediction
@@ -74,8 +75,7 @@ class MyRouter(APIRouter):
         return {"message": "Welcome to Machine Learning Model API!"}
 
     async def post(self, flower: Flower):
-        features_dataframe = await self.__get_features_dataframe(flower)
-        prediction = await self.__get_prediction(features_dataframe)
+        prediction = await asyncio.gather(self.__get_prediction_concurrent(flower))
         return {"class": prediction}
 
 
