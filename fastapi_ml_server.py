@@ -66,9 +66,7 @@ class MyRouter(APIRouter):
         Returns:
             prediction (str): A string representing the predicted flower class.
         """
-        loop = asyncio.get_event_loop()
-
-        prediction = await loop.run_in_executor(None, production_machine_learning_model.predict, features_dataframe)
+        prediction = production_machine_learning_model.predict(features_dataframe)[0]
         prediction = iris_target_label_encoder.inverse_transform([int(prediction)])[0]
         return prediction
 
