@@ -2,6 +2,7 @@ from fastapi import FastAPI, APIRouter
 from fastapi import Request
 from pydantic import BaseModel
 import pandas as pd
+import asyncio
 from utils.file_handler import PickleHandler
 from utils.path_operations import get_working_directory
 
@@ -65,7 +66,9 @@ class MyRouter(APIRouter):
         Returns:
             prediction (str): A string representing the predicted flower class.
         """
-        prediction = production_machine_learning_model.predict(features_dataframe)[0]
+        loop = asyncio.get_event_loop()
+
+        prediction = await loop.run_in_executor(None, production_machine_learning_model.predict, features_dataframe)
         prediction = iris_target_label_encoder.inverse_transform([int(prediction)])[0]
         return prediction
 
