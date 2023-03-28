@@ -23,6 +23,8 @@ uvicorn main:app --reload
 
 You can write a custom router to route urls to class methods.
 
+Just have a look at [custom_router.py](https://github.com/AyberkYavuz/fastapi_examples/blob/main/custom_router.py)
+
 to run it, use this command in your terminal
 
 ```bash
