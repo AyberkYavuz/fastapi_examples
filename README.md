@@ -122,5 +122,7 @@ Here's an example of a valid JSON object that you could use to test **/predict_c
 | Flask       | 300             | 1421                                 | 5.0     | 119.3/sec  |
 | Flask       | 350             | 1472                                 | 5.43    | 125.8/sec  |
 | Flask       | 400             | 1603                                 | 10.25   | 132.8/sec  |
+| Flask       | 450             | 1642                                 | 18.67   | 144.8/sec  |
+| Flask       | 500             | 1674                                 | 21.40   | 154.8/sec  |
 
 
