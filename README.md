@@ -111,3 +111,16 @@ Here's an example of a valid JSON object that you could use to test **/predict_c
   "petal_width": 0.2
 }
 ```
+
+## FaskAPI vs Flask 
+
+| Server Type | Number of Users | Average Response Time (Milliseconds) | Error % | Throughput |
+|-------------|-----------------|--------------------------------------|---------|------------|
+| Flask       | 150             | 481                                  | 0.0     | 105.2/sec  |
+| Flask       | 200             | 836                                  | 0.0     | 111.2/sec  |
+| Flask       | 250             | 1124                                 | 0.0     | 117.2/sec  |
+| Flask       | 300             | 1421                                 | 5.0     | 119.3/sec  |
+| Flask       | 350             | 1472                                 | 5.43    | 125.8/sec  |
+| Flask       | 400             | 1603                                 | 10.25   | 132.8/sec  |
+
+
