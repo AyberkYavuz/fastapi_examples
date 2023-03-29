@@ -112,17 +112,25 @@ Here's an example of a valid JSON object that you could use to test **/predict_c
 }
 ```
 
-## FaskAPI vs Flask 
+## FastAPI vs Flask 
 
 | Server Type | Number of Users | Average Response Time (Milliseconds) | Error % | Throughput |
 |-------------|-----------------|--------------------------------------|---------|------------|
 | Flask       | 150             | 481                                  | 0.0     | 105.2/sec  |
+| FastAPI     | 150             | 183                                  | 0.0     | 124.9/sec  |
 | Flask       | 200             | 836                                  | 0.0     | 111.2/sec  |
+| FastAPI     | 200             | 405                                  | 0.0     | 133.6/sec  |
 | Flask       | 250             | 1124                                 | 0.0     | 117.2/sec  |
+| FastAPI     | 250             | 479                                  | 0.0     | 154.9/sec  |
 | Flask       | 300             | 1421                                 | 5.0     | 119.3/sec  |
+| FastAPI     | 300             | 915                                  | 0.0     | 146.8/sec  |
 | Flask       | 350             | 1472                                 | 5.43    | 125.8/sec  |
+| FastAPI     | 350             | 952                                  | 0.0     | 152.9/sec  |
 | Flask       | 400             | 1603                                 | 10.25   | 132.8/sec  |
+| FastAPI     | 400             | 1034                                 | 0.0     | 157.6/sec  |
 | Flask       | 450             | 1642                                 | 18.67   | 144.8/sec  |
+| FastAPI     | 450             | 1247                                 | 0.0     | 165.3/sec  |
 | Flask       | 500             | 1674                                 | 21.40   | 154.8/sec  |
+| FastAPI     | 500             | 1366                                 | 0.40    | 171.8/sec  |
 
 
