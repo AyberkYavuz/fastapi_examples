@@ -140,6 +140,30 @@ In summary, load testing of machine learning backend APIs is crucial for assessi
 
 ## FastAPI vs Flask 
 
+I used **Apache JMeter** to collect some KPIs of ml backend APIs.
+
+**Note:** These tests were done on my local machine.
+
+**My Local Machine Information:**
+
+- MacBook Pro (15-inch, 2018)
+- Processor: 2,2 GHz 6-Core Intel Core i7
+- Memory: 16 GB 2400 MHz DDR4
+
+### Load Test Results Table's Columns Descriptions
+
+**Server Type:** The type of server which is flask or fastapi.
+
+**Number of Users:** The number of users is the total number of virtual users or clients that interact with the system or application during a load test. This metric is crucial because it helps determine the maximum capacity of the system to handle a certain number of users simultaneously.
+
+**Average Response Time (Milliseconds):** The average response time is the average time it takes for the system or application to respond to a user's request. It is usually measured in milliseconds. A high response time can indicate performance issues and can negatively impact user experience.
+
+**Error %:** The error percentage represents the percentage of requests that the system or application fails to handle successfully. It is a measure of the system's ability to handle unexpected errors and exceptions. A high error percentage can indicate performance issues or bugs in the system.
+
+**Throughput:** Throughput refers to the rate at which the system or application can process requests during a load test. It is usually measured in requests per second. A high throughput indicates that the system can handle a high volume of requests without performance degradation or errors.
+
+### Load Test Results Table
+
 | Server Type | Number of Users | Average Response Time (Milliseconds) | Error % | Throughput |
 |-------------|-----------------|--------------------------------------|---------|------------|
 | Flask       | 150             | 481                                  | 0.0     | 105.2/sec  |
