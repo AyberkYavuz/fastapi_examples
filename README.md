@@ -112,6 +112,14 @@ Here's an example of a valid JSON object that you could use to test **/predict_c
 }
 ```
 
+### flask_ml_server.py
+
+Just have a look at [flask_ml_server.py](https://github.com/AyberkYavuz/fastapi_examples/blob/main/flask_ml_server.py)
+
+This file is the flask implementation of fastapi_ml_server.py.
+
+I want to compare the performances of flask and fastapi ml servers.
+
 ## FastAPI vs Flask 
 
 | Server Type | Number of Users | Average Response Time (Milliseconds) | Error % | Throughput |
