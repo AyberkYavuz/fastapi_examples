@@ -184,3 +184,4 @@ I used **Apache JMeter** to collect some KPIs of ml backend APIs.
 | FastAPI     | 500             | 1366                                 | 0.40    | 171.8/sec  |
 
 
+As you can see, FastAPI performs better on all user groups.
