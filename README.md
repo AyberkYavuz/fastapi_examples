@@ -120,6 +120,8 @@ This file is the flask implementation of fastapi_ml_server.py.
 
 I want to compare the performances of flask and fastapi ml servers.
 
+to run flask_ml_server.py, click the run button of your code editor. 
+
 ## FastAPI vs Flask 
 
 | Server Type | Number of Users | Average Response Time (Milliseconds) | Error % | Throughput |
