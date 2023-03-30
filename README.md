@@ -1,11 +1,9 @@
 # fastapi_examples
 This repository is for containing source codes of examples of fastapi.
 
-## Installation
+## Required Packages Installation
 ```bash
-pip3 install fastapi 
-
-pip3 install uvicorn 
+pip3 install -r requirements.txt
 ```
 
 ## Description
