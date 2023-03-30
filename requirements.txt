@@ -1,0 +1,6 @@
+fastapi==0.95.0
+Flask==1.1.4
+pandas==1.5.3
+pydantic==1.9.0
+requests==2.27.1
+sklearn==0.0
